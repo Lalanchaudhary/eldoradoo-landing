@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eldorado Mobile & PC Repair Center | Fast & Reliable Repair Services</title>
+  <meta name="description" content="eldorado Mobile & PC Repair Center — Expert smartphone, laptop, desktop & gaming PC repair. Same-day service, genuine parts, certified technicians. Book your repair today!" />
+  <meta name="keywords" content="mobile repair shop, phone repair near me, laptop repair service, PC repair center, computer repair shop, screen replacement, battery replacement, motherboard repair, gaming PC repair, data recovery service, software installation, virus removal, affordable mobile repair, laptop service center, desktop repair experts" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="eldorado Mobile & PC Repair Center" />
+  <meta property="og:description" content="Fast & Reliable Mobile & PC Repair Services — Smartphones, Laptops, Desktops & Gaming PCs" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Local Business Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "eldorado Mobile & PC Repair Center",
+    "description": "Expert repair services for smartphones, laptops, desktops, and gaming PCs",
+    "telephone": "+1-555-eldorado-1",
+    "email": "support@eldoradorepair.com",
+    "url": "https://eldoradorepair.com",
+    "openingHours": ["Mo-Sa 09:00-20:00", "Su 10:00-17:00"],
+    "priceRange": "$$",
+    "serviceType": ["Mobile Repair", "Laptop Repair", "Desktop Repair", "Gaming PC Repair"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Repair Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Screen Replacement"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Battery Replacement"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Recovery"}}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --black:        #09090f;
+      --surface:      #111122;
+      --surface2:     #181830;
+      --card:         #1a1a35;
+      --border:       #252550;
+      --neon:         #00ff88;
+      --neon-dim:     #00cc6a;
+      --neon-glow:    rgba(0,255,136,0.18);
+      --neon-glow2:   rgba(0,255,136,0.08);
+      --blue:         #0d3bff;
+      --blue-mid:     #1a2aff;
+      --blue-soft:    #2040cc;
+      --text:         #e8e8f0;
+      --text-muted:   #8888aa;
+      --text-faint:   #555577;
+      --white:        #ffffff;
+      --radius:       12px;
+      --radius-lg:    20px;
+      --transition:   0.25s cubic-bezier(0.4,0,0.2,1);
+      --font-main:    'Space Grotesk', sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-main);
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--neon-dim); }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+    .text-neon { color: var(--neon); }
+    .text-muted { color: var(--text-muted); }
+    .tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--neon);
+      background: var(--neon-glow2);
+      border: 1px solid rgba(0,255,136,0.2);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-top: 12px;
+      max-width: 560px;
+    }
+    .section-head { margin-bottom: 56px; }
+    .section-head.center { text-align: center; }
+    .section-head.center .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-neon {
+      background: var(--neon);
+      color: var(--black);
+    }
+    .btn-neon:hover {
+      background: #33ffaa;
+      box-eldorado: 0 0 28px rgba(0,255,136,0.45);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--neon);
+      color: var(--neon);
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5a;
+      box-eldorado: 0 0 24px rgba(37,211,102,0.4);
+      transform: translateY(-2px);
+    }
+    .btn-blue {
+      background: var(--blue-mid);
+      color: white;
+    }
+    .btn-blue:hover {
+      background: var(--blue-soft);
+      box-eldorado: 0 0 24px rgba(26,42,255,0.4);
+      transform: translateY(-2px);
+    }
+
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.88);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    .popup-overlay.is-visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .popup-card {
+      width: min(100%, 460px);
+      max-height: calc(100vh - 40px);
+      border-radius: 24px;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .popup-card img {
+      width: 100%;
+      height: 100%;
+      max-height: calc(100vh - 64px);
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      border-radius: 0;
+    }
+
+    @media (max-width: 768px) {
+      .popup-overlay {
+        padding: 0;
+      }
+      .popup-card {
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 0;
+      }
+      .popup-card img {
+        max-height: 100vh;
+      }
+    }
+
+    /* ===== NAV ===== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(9,9,15,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    #navbar.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(9,9,15,0.97);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .nav-logo .logo-icon {
+      width: 38px; height: 38px;
+      background: var(--neon);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--black);
+      font-size: 18px;
+    }
+    .nav-logo span { color: var(--neon); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--neon);
+      background: var(--neon-glow2);
+    }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 68px; left: 0; right: 0;
+      background: rgba(9,9,15,0.98);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px 24px;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      color: var(--text-muted);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--neon); }
+    .mobile-menu .mobile-cta { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+
+    /* ===== HERO ===== */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 68px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 65% 40%, rgba(0,255,136,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 70% at 20% 80%, rgba(13,59,255,0.1) 0%, transparent 60%),
+        linear-gradient(180deg, #09090f 0%, #0c0c1e 100%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,255,136,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,136,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--neon-glow2);
+      border: 1px solid rgba(0,255,136,0.25);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: var(--neon);
+      font-family: var(--font-mono);
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--neon);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-eldorado: 0 0 0 0 rgba(0,255,136,0.6); }
+      50% { box-eldorado: 0 0 0 5px rgba(0,255,136,0); }
+    }
+    .hero-title {
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .accent {
+      color: var(--neon);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-stat .num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      font-family: var(--font-mono);
+    }
+    .hero-stat .num span { color: var(--neon); }
+    .hero-stat .label { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-device-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .device-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .device-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--neon), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .device-card:hover { border-color: rgba(0,255,136,0.3); transform: translateY(-4px); box-eldorado: 0 20px 40px rgba(0,0,0,0.4); }
+    .device-card:hover::before { opacity: 1; }
+    .device-card.featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--card), rgba(0,255,136,0.05));
+      border-color: rgba(0,255,136,0.2);
+    }
+    .device-icon {
+      font-size: 40px;
+      color: var(--neon);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .device-card h3 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .device-card p { font-size: 13px; color: var(--text-muted); }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,255,136,0.1);
+      border: 1px solid rgba(0,255,136,0.2);
+      color: var(--neon);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 8px;
+    }
+    .status-badge::before {
+      content: '●';
+      font-size: 8px;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* ===== TRUST STRIP ===== */
+    .trust-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .trust-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .trust-item i { color: var(--neon); font-size: 16px; }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--surface); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      transition: var(--transition);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon), var(--blue-mid));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .service-card:hover {
+      border-color: rgba(0,255,136,0.25);
+      transform: translateY(-6px);
+      box-eldorado: 0 24px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,255,136,0.08);
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .svc-icon {
+      width: 56px; height: 56px;
+      background: var(--neon-glow2);
+      border: 1px solid rgba(0,255,136,0.15);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--neon);
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .service-card:hover .svc-icon {
+      background: var(--neon-glow);
+      box-eldorado: 0 0 20px var(--neon-glow);
+    }
+    .service-card h3 { font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+    .service-card .svc-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--neon-dim);
+      font-family: var(--font-mono);
+      margin-top: 16px;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--black); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-wrap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .about-img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--surface2) 0%, var(--card) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .about-img-placeholder i {
+      font-size: 64px;
+      color: rgba(0,255,136,0.3);
+    }
+    .about-img-placeholder span {
+      font-size: 14px;
+      color: var(--text-faint);
+      font-family: var(--font-mono);
+    }
+    .about-float-card {
+      position: absolute;
+      background: var(--card);
+      border: 1px solid rgba(0,255,136,0.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-eldorado: 0 16px 40px rgba(0,0,0,0.5);
+    }
+    .about-float-card.card1 { bottom: -20px; left: -20px; }
+    .about-float-card.card2 { top: -20px; right: -20px; }
+    .about-float-card .fc-icon {
+      width: 42px; height: 42px;
+      background: var(--neon-glow);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .about-float-card .fc-num { font-size: 22px; font-weight: 700; color: var(--white); font-family: var(--font-mono); }
+    .about-float-card .fc-label { font-size: 12px; color: var(--text-muted); }
+    .about-list { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+    .about-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .about-item-icon {
+      width: 44px; height: 44px;
+      background: var(--neon-glow2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .about-item h4 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .about-item p { font-size: 14px; color: var(--text-muted); }
+
+    /* ===== WHY CHOOSE US ===== */
+    #why { background: var(--surface); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .why-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: var(--transition);
+    }
+    .why-card:hover {
+      border-color: rgba(0,255,136,0.25);
+      transform: translateY(-4px);
+      box-eldorado: 0 16px 40px rgba(0,0,0,0.3);
+    }
+    .why-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--neon);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .why-icon { font-size: 36px; color: var(--neon); margin-bottom: 16px; display: block; }
+    .why-card h3 { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .why-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ===== PRICING ===== */
+    #pricing { background: var(--black); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: rgba(0,255,136,0.4);
+      background: linear-gradient(160deg, var(--card), rgba(0,255,136,0.04));
+    }
+    .price-card.featured::before {
+      content: 'POPULAR';
+      position: absolute;
+      top: -1px; right: 24px;
+      background: var(--neon);
+      color: var(--black);
+      font-size: 10px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 0 0 8px 8px;
+    }
+    .price-card:hover:not(.featured) {
+      border-color: rgba(0,255,136,0.2);
+      transform: translateY(-4px);
+    }
+    .price-card.featured:hover { transform: translateY(-4px); }
+    .price-service { font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .price-name { font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 20px; }
+    .price-range {
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--neon);
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+    .price-range .currency { font-size: 20px; vertical-align: top; margin-top: 8px; display: inline-block; }
+    .price-range .from { font-size: 14px; color: var(--text-muted); font-weight: 400; margin-left: 4px; }
+    .price-note { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .price-includes { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .price-includes li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .price-includes li i { color: var(--neon); font-size: 13px; flex-shrink: 0; }
+    .price-card .btn { width: 100%; justify-content: center; }
+
+    /* ===== GALLERY ===== */
+    #gallery { background: var(--surface); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      background: var(--card);
+      border: 1px solid var(--border);
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .gallery-item:hover { transform: scale(1.02); box-eldorado: 0 20px 40px rgba(0,0,0,0.5); }
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery-placeholder i { font-size: 32px; color: rgba(0,255,136,0.25); }
+    .gallery-placeholder span { font-size: 12px; color: var(--text-faint); font-family: var(--font-mono); }
+    .gallery-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .gallery-label strong { display: block; color: var(--white); font-size: 14px; }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { background: var(--black); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .testi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .testi-card:hover { border-color: rgba(0,255,136,0.2); transform: translateY(-4px); }
+    .testi-stars { color: #FFB800; font-size: 14px; margin-bottom: 16px; }
+    .testi-text { font-size: 15px; color: var(--text); line-height: 1.65; font-style: italic; margin-bottom: 24px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--neon-glow2);
+      border: 2px solid rgba(0,255,136,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon);
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .testi-author .name { font-size: 14px; font-weight: 600; color: var(--white); }
+    .testi-author .role { font-size: 12px; color: var(--text-muted); }
+
+    /* ===== FAQ ===== */
+    #faq { background: var(--surface); }
+    .faq-grid { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: rgba(0,255,136,0.3); }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      transition: color var(--transition);
+      background: transparent;
+    }
+    .faq-q:hover { color: var(--neon); }
+    .faq-item.open .faq-q { color: var(--neon); }
+    .faq-q i {
+      color: var(--neon);
+      font-size: 14px;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+    .faq-a {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.25s;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 20px; }
+
+    /* ===== BLOG ===== */
+    #blog { background: var(--black); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .blog-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .blog-card:hover { border-color: rgba(0,255,136,0.2); transform: translateY(-4px); box-eldorado: 0 20px 40px rgba(0,0,0,0.4); }
+    .blog-img {
+      height: 170px;
+      background: linear-gradient(135deg, var(--surface2), var(--card));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 60%, rgba(0,255,136,0.08), transparent 60%);
+    }
+    .blog-img i { font-size: 48px; color: rgba(0,255,136,0.2); }
+    .blog-body { padding: 24px; }
+    .blog-cat {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 8px;
+    }
+    .blog-card h3 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.4; }
+    .blog-card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; }
+    .blog-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-faint); }
+    .blog-meta a { color: var(--neon); font-weight: 600; font-size: 13px; }
+    .blog-meta a:hover { text-decoration: underline; }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--surface); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .contact-icon {
+      width: 48px; height: 48px;
+      background: var(--neon-glow2);
+      border: 1px solid rgba(0,255,136,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .contact-item .ci-label { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+    .contact-item .ci-val { font-size: 16px; font-weight: 600; color: var(--white); }
+    .contact-item .ci-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .contact-social { display: flex; gap: 10px; margin-top: 8px; }
+    .social-btn {
+      width: 40px; height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 16px;
+      transition: var(--transition);
+    }
+    .social-btn:hover { border-color: var(--neon); color: var(--neon); background: var(--neon-glow2); }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      font-size: 14px;
+      color: var(--text);
+      font-family: var(--font-main);
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: rgba(0,255,136,0.5);
+      box-eldorado: 0 0 0 3px rgba(0,255,136,0.06);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select { cursor: pointer; appearance: none; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-faint); }
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 200px;
+      margin-top: 20px;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .map-container i { font-size: 36px; color: rgba(0,255,136,0.2); }
+    .map-container span { font-size: 13px; color: var(--text-faint); font-family: var(--font-mono); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand { }
+    .footer-brand .logo { margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+    .footer-col h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 16px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
+    .footer-col ul li a:hover { color: var(--neon); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--text-faint); }
+    .footer-bottom a { color: var(--neon); }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .float-btns {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 900;
+    }
+    .float-btn {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-eldorado: 0 8px 24px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-wa { background: #25D366; color: white; }
+    .float-call { background: var(--neon); color: var(--black); }
+    .float-btn .float-tip {
+      position: absolute;
+      right: 68px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .float-btn:hover .float-tip { opacity: 1; }
+
+    /* ===== SCROLL TOP ===== */
+    #scrollTop {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      width: 44px; height: 44px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 900;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #scrollTop.visible { opacity: 1; pointer-events: all; }
+    #scrollTop:hover { border-color: var(--neon); color: var(--neon); background: var(--neon-glow2); }
+
+    /* ===== ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
+    .reveal-d5 { transition-delay: 0.5s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; padding: 40px 0 60px; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { display: none; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { gap: 24px; }
+      .section { padding: 64px 0; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+        eldorado<span>Repair</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+15555555555" class="btn btn-outline" style="padding:9px 18px;font-size:13px;">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <a href="#contact" class="btn btn-neon" style="padding:9px 18px;font-size:13px;">
+          Book Repair
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Choose Us</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-cta">
+      <a href="tel:+15555555555" class="btn btn-outline"><i class="fas fa-phone"></i> Call Now</a>
+      <a href="https://wa.me/15555555555" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HOME / HERO ===== -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">● Available for Same-Day Repairs</div>
+        <h1 class="hero-title">
+          Fast &amp; Reliable
+          <span class="accent">Mobile &amp; PC Repair</span>
+          Services
+        </h1>
+        <p class="hero-sub">Expert solutions for smartphones, laptops, desktops &amp; gaming PCs — trusted by thousands of customers since 2015.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-neon"><i class="fas fa-calendar-check"></i> Book Repair</a>
+          <a href="tel:+15555555555" class="btn btn-outline"><i class="fas fa-phone"></i> Call Now</a>
+          <a href="https://wa.me/15555555555" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">10<span>K+</span></div>
+            <div class="label">Repairs Completed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">98<span>%</span></div>
+            <div class="label">Success Rate</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">9<span>+</span></div>
+            <div class="label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-device-grid">
+          <div class="device-card">
+            <i class="fas fa-mobile-alt device-icon"></i>
+            <h3>Mobile Repair</h3>
+            <p>All brands &amp; models</p>
+            <div class="status-badge">From $29</div>
+          </div>
+          <div class="device-card">
+            <i class="fas fa-laptop device-icon"></i>
+            <h3>Laptop Repair</h3>
+            <p>Any OS, any issue</p>
+            <div class="status-badge">From $49</div>
+          </div>
+          <div class="device-card featured">
+            <i class="fas fa-gamepad device-icon"></i>
+            <h3>Gaming PC Repair &amp; Upgrade</h3>
+            <p>Performance optimization, overclocking &amp; custom builds</p>
+            <div class="status-badge">Free Diagnosis</div>
+          </div>
+          <div class="device-card">
+            <i class="fas fa-desktop device-icon"></i>
+            <h3>Desktop PC</h3>
+            <p>Home &amp; office PCs</p>
+            <div class="status-badge">From $39</div>
+          </div>
+          <div class="device-card">
+            <i class="fas fa-database device-icon"></i>
+            <h3>Data Recovery</h3>
+            <p>HDD, SSD &amp; flash</p>
+            <div class="status-badge">No Fix, No Pay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><i class="fas fa-shield-alt"></i> 90-Day Warranty</div>
+      <div class="trust-item"><i class="fas fa-bolt"></i> Same-Day Service</div>
+      <div class="trust-item"><i class="fas fa-certificate"></i> Certified Technicians</div>
+      <div class="trust-item"><i class="fas fa-star"></i> 4.9/5 Rating</div>
+      <div class="trust-item"><i class="fas fa-clock"></i> Mon–Sun 9AM–8PM</div>
+      <div class="trust-item"><i class="fas fa-tools"></i> Genuine Parts</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">What We Fix</div>
+      <h2 class="section-title reveal">Our Repair Services</h2>
+      <p class="section-sub reveal reveal-d1">From cracked screens to motherboard-level repairs — we handle it all with precision and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Screen Replacement</h3>
+        <p>OLED, LCD, and AMOLED screen replacements for all major brands including iPhone, Samsung, OnePlus, and more.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 30–60 mins</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="svc-icon"><i class="fas fa-battery-three-quarters"></i></div>
+        <h3>Battery Replacement</h3>
+        <p>Restore full battery life with genuine high-capacity replacements. We carry stock for 200+ models.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 20–30 mins</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="svc-icon"><i class="fas fa-plug"></i></div>
+        <h3>Charging Port Repair</h3>
+        <p>USB-C, Lightning, and Micro-USB port cleaning, repair, and replacement for phones and laptops.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 45–90 mins</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-tint-slash"></i></div>
+        <h3>Water Damage Repair</h3>
+        <p>Ultrasonic board cleaning and component-level treatment to recover water-damaged devices. Free assessment.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–3 days</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="svc-icon"><i class="fas fa-download"></i></div>
+        <h3>Software Installation</h3>
+        <p>OS installs, driver updates, software setup, and factory resets for Windows, macOS, and Android/iOS.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–2 hours</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="svc-icon"><i class="fas fa-virus-slash"></i></div>
+        <h3>Virus Removal</h3>
+        <p>Deep malware scanning, virus removal, ransomware recovery, and security hardening for your devices.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–2 hours</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-laptop"></i></div>
+        <h3>Laptop Repair</h3>
+        <p>Screen, keyboard, hinge, motherboard, thermal paste, and fan repairs for all laptop makes and models.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–3 hours</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="svc-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Desktop Repair</h3>
+        <p>Full desktop diagnostics, PSU, GPU, RAM, and CPU troubleshooting for home and office computers.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–4 hours</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="svc-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Gaming PC Repair &amp; Upgrade</h3>
+        <p>GPU upgrades, RGB builds, thermal management, overclocking, and full gaming rig optimization.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 2–6 hours</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-hdd"></i></div>
+        <h3>SSD &amp; RAM Upgrade</h3>
+        <p>Dramatically speed up your system with NVMe SSD swaps and RAM upgrades. Data migration included.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–2 hours</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="svc-icon"><i class="fas fa-database"></i></div>
+        <h3>Data Recovery</h3>
+        <p>Professional data recovery from failed HDDs, SSDs, memory cards, and flash drives. No fix, no fee.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–5 days</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="svc-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Motherboard Repair</h3>
+        <p>IC-level board repair, BGA rework, BIOS flashing, and trace repair for phones, laptops, and PCs.</p>
+        <span class="svc-time"><i class="fas fa-clock"></i> 1–5 days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <i class="fas fa-tools"></i>
+            <span>// repair center photo</span>
+          </div>
+        </div>
+        <div class="about-float-card card1">
+          <div class="fc-icon"><i class="fas fa-wrench"></i></div>
+          <div>
+            <div class="fc-num">10K+</div>
+            <div class="fc-label">Devices Repaired</div>
+          </div>
+        </div>
+        <div class="about-float-card card2">
+          <div class="fc-icon"><i class="fas fa-star"></i></div>
+          <div>
+            <div class="fc-num">4.9★</div>
+            <div class="fc-label">Customer Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="tag">Who We Are</div>
+        <h2 class="section-title reveal">Trusted Repair Experts Since 2015</h2>
+        <p class="section-sub reveal reveal-d1">eldorado Mobile &amp; PC Repair Center has been the go-to destination for device repairs in the community. We combine technical excellence with honest pricing.</p>
+        <div class="about-list">
+          <div class="about-item reveal reveal-d2">
+            <div class="about-item-icon"><i class="fas fa-user-shield"></i></div>
+            <div>
+              <h4>Experienced Technicians</h4>
+              <p>Our team carries 5+ years of hands-on experience and manufacturer certifications across all major brands.</p>
+            </div>
+          </div>
+          <div class="about-item reveal reveal-d3">
+            <div class="about-item-icon"><i class="fas fa-check-circle"></i></div>
+            <div>
+              <h4>Genuine Spare Parts</h4>
+              <p>We only use OEM-grade or manufacturer-certified components — never counterfeit or low-quality substitutes.</p>
+            </div>
+          </div>
+          <div class="about-item reveal reveal-d4">
+            <div class="about-item-icon"><i class="fas fa-tags"></i></div>
+            <div>
+              <h4>Affordable &amp; Transparent Pricing</h4>
+              <p>No hidden fees. You get a full quote upfront before any work begins — guaranteed.</p>
+            </div>
+          </div>
+          <div class="about-item reveal reveal-d5">
+            <div class="about-item-icon"><i class="fas fa-medal"></i></div>
+            <div>
+              <h4>Customer Satisfaction Guarantee</h4>
+              <p>90-day warranty on all repairs. If something isn't right, we fix it — no questions asked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">The Advantage</div>
+      <h2 class="section-title reveal">Why Choose eldorado Repair?</h2>
+      <p class="section-sub reveal reveal-d1">We set ourselves apart with technical depth, honest service, and an obsession with quality.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-num">01 — Quality</span>
+        <i class="fas fa-certificate why-icon"></i>
+        <h3>Certified Technicians</h3>
+        <p>Every repair is handled by certified professionals with brand-specific training and years of real-world experience.</p>
+      </div>
+      <div class="why-card reveal reveal-d1">
+        <span class="why-num">02 — Speed</span>
+        <i class="fas fa-bolt why-icon"></i>
+        <h3>Fast Turnaround Time</h3>
+        <p>Most repairs completed same day. We respect your time — no unnecessary delays or vague timelines.</p>
+      </div>
+      <div class="why-card reveal reveal-d2">
+        <span class="why-num">03 — Parts</span>
+        <i class="fas fa-gem why-icon"></i>
+        <h3>High-Quality Parts</h3>
+        <p>OEM and manufacturer-grade components only. Your device deserves the same quality it came with.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">04 — Value</span>
+        <i class="fas fa-tags why-icon"></i>
+        <h3>Affordable Prices</h3>
+        <p>Premium repair quality at prices that won't break the bank. Transparent quotes — no surprises.</p>
+      </div>
+      <div class="why-card reveal reveal-d1">
+        <span class="why-num">05 — Support</span>
+        <i class="fas fa-headset why-icon"></i>
+        <h3>24/7 Customer Support</h3>
+        <p>Questions before or after your repair? Our team is reachable via phone, WhatsApp, or email any time.</p>
+      </div>
+      <div class="why-card reveal reveal-d2">
+        <span class="why-num">06 — Trust</span>
+        <i class="fas fa-shield-alt why-icon"></i>
+        <h3>Warranty on All Repairs</h3>
+        <p>90-day warranty on every repair. If the same issue resurfaces, we fix it at absolutely no charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">Transparent Pricing</div>
+      <h2 class="section-title reveal">Popular Repair Prices</h2>
+      <p class="section-sub reveal reveal-d1">Starting prices for common repairs. Get a free exact quote before we begin any work.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card featured reveal">
+        <div class="price-service">Mobile</div>
+        <div class="price-name">Screen Replacement</div>
+        <div class="price-range"><span class="currency">$</span>29<span class="from">starting</span></div>
+        <div class="price-note">Price varies by model &amp; screen type</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> OEM-grade display</li>
+          <li><i class="fas fa-check"></i> Touch calibration</li>
+          <li><i class="fas fa-check"></i> 90-day warranty</li>
+          <li><i class="fas fa-check"></i> Same-day available</li>
+        </ul>
+        <a href="#contact" class="btn btn-neon">Get Exact Quote</a>
+      </div>
+      <div class="price-card reveal reveal-d1">
+        <div class="price-service">Mobile / Laptop</div>
+        <div class="price-name">Battery Replacement</div>
+        <div class="price-range"><span class="currency">$</span>19<span class="from">starting</span></div>
+        <div class="price-note">Genuine capacity cells</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> 100% capacity cell</li>
+          <li><i class="fas fa-check"></i> Battery health check</li>
+          <li><i class="fas fa-check"></i> 90-day warranty</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book Now</a>
+      </div>
+      <div class="price-card reveal reveal-d2">
+        <div class="price-service">Laptop</div>
+        <div class="price-name">Laptop Repair</div>
+        <div class="price-range"><span class="currency">$</span>49<span class="from">starting</span></div>
+        <div class="price-note">Free diagnosis included</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> Full diagnostic</li>
+          <li><i class="fas fa-check"></i> Component-level check</li>
+          <li><i class="fas fa-check"></i> 90-day warranty</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book Now</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-service">PC / Laptop</div>
+        <div class="price-name">SSD Upgrade</div>
+        <div class="price-range"><span class="currency">$</span>39<span class="from">+ part cost</span></div>
+        <div class="price-note">Labor only; you choose your SSD</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> NVMe / SATA support</li>
+          <li><i class="fas fa-check"></i> OS migration</li>
+          <li><i class="fas fa-check"></i> Benchmark tested</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book Now</a>
+      </div>
+      <div class="price-card reveal reveal-d1">
+        <div class="price-service">PC / Laptop</div>
+        <div class="price-name">Virus Removal</div>
+        <div class="price-range"><span class="currency">$</span>35<span class="from">flat</span></div>
+        <div class="price-note">Includes security tune-up</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> Deep malware scan</li>
+          <li><i class="fas fa-check"></i> Rootkit removal</li>
+          <li><i class="fas fa-check"></i> Security hardening</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book Now</a>
+      </div>
+      <div class="price-card reveal reveal-d2">
+        <div class="price-service">Any Device</div>
+        <div class="price-name">Data Recovery</div>
+        <div class="price-range"><span class="currency">$</span>79<span class="from">starting</span></div>
+        <div class="price-note">No fix = no charge policy</div>
+        <ul class="price-includes">
+          <li><i class="fas fa-check"></i> HDD, SSD, Flash</li>
+          <li><i class="fas fa-check"></i> Free assessment</li>
+          <li><i class="fas fa-check"></i> Secure transfer</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section-sm">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">Before &amp; After</div>
+      <h2 class="section-title reveal">Repair Gallery</h2>
+      <p class="section-sub reveal reveal-d1">Real repairs, real results. See the quality of our work firsthand.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <i class="fas fa-mobile-alt"></i>
+          <span>// screen-repair-before-after.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>iPhone Screen Replacement</strong>Cracked → Crystal Clear</div>
+      </div>
+      <div class="gallery-item reveal reveal-d1">
+        <div class="gallery-placeholder">
+          <i class="fas fa-laptop"></i>
+          <span>// laptop-repair.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>Laptop Motherboard Repair</strong>Dead board → Fully Working</div>
+      </div>
+      <div class="gallery-item reveal reveal-d2">
+        <div class="gallery-placeholder">
+          <i class="fas fa-gamepad"></i>
+          <span>// gaming-pc-build.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>Gaming PC Upgrade</strong>Budget Rig → Full RGB Beast</div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <i class="fas fa-hdd"></i>
+          <span>// data-recovery.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>Data Recovery</strong>Failed HDD → All Data Saved</div>
+      </div>
+      <div class="gallery-item reveal reveal-d1">
+        <div class="gallery-placeholder">
+          <i class="fas fa-tint-slash"></i>
+          <span>// water-damage.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>Water Damage Recovery</strong>Submerged → Fully Restored</div>
+      </div>
+      <div class="gallery-item reveal reveal-d2">
+        <div class="gallery-placeholder">
+          <i class="fas fa-microchip"></i>
+          <span>// motherboard-repair.jpg</span>
+        </div>
+        <div class="gallery-label"><strong>Motherboard BGA Rework</strong>No-boot → Stable System</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">Customer Reviews</div>
+      <h2 class="section-title reveal">What Customers Say</h2>
+      <p class="section-sub reveal reveal-d1">Over 10,000 happy customers trust eldorado Repair for their devices.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Brought my iPhone in with a shattered screen — it was fixed in under 45 minutes and looks brand new. Incredible service and the price was totally fair."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="name">Alex Johnson</div>
+            <div class="role">iPhone 14 Pro · Screen Repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"My gaming PC was overheating and crashing constantly. eldorado Repair diagnosed a failing thermal solution and upgraded my cooling setup. Rock solid now."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="name">Ryan Chen</div>
+            <div class="role">Gaming PC · Thermal Upgrade</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I thought my data was gone forever after my hard drive failed. They recovered everything — 5 years of photos and work files. Absolutely worth every penny."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="name">Maria Santos</div>
+            <div class="role">Laptop · Data Recovery</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Fast, professional and honest. Quoted me $40 less than two other shops. The repair held up perfectly — still going strong 6 months later. My go-to repair shop."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div>
+            <div class="name">David Kim</div>
+            <div class="role">Samsung S23 · Battery Replacement</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dropped my laptop in water. eldorado Repair cleaned the board, replaced two components, and had it running in 2 days. I was amazed they could save it at all."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="name">Sarah Williams</div>
+            <div class="role">MacBook Pro · Water Damage</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Upgraded my old HDD to an NVMe SSD — Windows now boots in 8 seconds. The team was super knowledgeable and migrated all my data without losing anything."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="name">James Patel</div>
+            <div class="role">Desktop PC · SSD Upgrade</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">FAQ</div>
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-sub reveal reveal-d1">Everything you need to know before bringing in your device.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item open">
+        <button class="faq-q">How long does a typical repair take? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">Most common repairs like screen replacements and battery swaps are completed within 30–90 minutes. More complex repairs such as motherboard work or water damage recovery may take 1–5 business days. We'll always give you a clear time estimate upfront.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you provide a warranty on repairs? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">Yes — all repairs carry a 90-day warranty. If the same issue reoccurs within that period due to our work or the parts used, we'll fix it at no charge. This applies to hardware repairs, parts, and workmanship.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you recover lost or deleted data? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">In most cases, yes. We use professional data recovery tools for failed HDDs, SSDs, memory cards, and flash drives. We offer a free initial assessment, and we operate a strict no-fix, no-fee policy — you only pay if we successfully recover your data.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you repair gaming PCs and consoles? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">Absolutely. We specialize in gaming PC diagnostics, GPU repair, thermal upgrades, overclocking, and full custom builds. We also handle common issues on gaming consoles. Our technicians are enthusiast gamers themselves — they understand performance demands.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you use genuine or original parts? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">We use OEM-grade or manufacturer-certified spare parts for all repairs. We never use cheap counterfeit components. If OEM parts aren't available for your specific device, we'll clearly inform you and explain the alternatives before proceeding.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need an appointment, or can I walk in? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">Walk-ins are welcome! However, booking an appointment ensures we have the right parts in stock and a technician ready for you — minimizing your wait time. You can book online, call us, or message via WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What brands and models do you support? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">We support virtually all brands — iPhone, Samsung, Google Pixel, OnePlus, Xiaomi, Huawei (mobile); Dell, HP, Lenovo, Asus, Acer, Apple MacBook (laptops); and custom, MSI, ASUS ROG, Corsair builds (gaming PCs). If your brand isn't listed, just ask!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is my data safe while you have my device? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-a">Your privacy is taken seriously. Technicians only access what's needed to diagnose and repair the issue. We recommend backing up your data before dropping off any device as a best practice. We never store, copy, or share your personal files.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section id="blog" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">Tech Tips & Guides</div>
+      <h2 class="section-title reveal">From the Repair Blog</h2>
+      <p class="section-sub reveal reveal-d1">Expert advice to keep your devices running at their best.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-img"><i class="fas fa-mobile-alt"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Mobile</div>
+          <h3>Common Smartphone Problems and How to Fix Them</h3>
+          <p>From overheating batteries to ghost touches — learn what causes the most frequent mobile issues and when to DIY vs. seek professional help.</p>
+          <div class="blog-meta">
+            <span>June 10, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-d1">
+        <div class="blog-img"><i class="fas fa-laptop"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Laptop</div>
+          <h3>How to Speed Up Your Laptop in 7 Simple Steps</h3>
+          <p>Before you spend money on a new machine, try these proven techniques to dramatically improve your laptop's speed and responsiveness.</p>
+          <div class="blog-meta">
+            <span>May 22, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-d2">
+        <div class="blog-img"><i class="fas fa-hdd"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Storage</div>
+          <h3>SSD vs HDD: Which Is Better for Your Needs?</h3>
+          <p>Speed, reliability, cost — we break down the real differences so you can make the right storage choice for your use case.</p>
+          <div class="blog-meta">
+            <span>May 5, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-img"><i class="fas fa-battery-quarter"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Battery</div>
+          <h3>5 Signs Your Phone Battery Needs Replacing Now</h3>
+          <p>Sudden shutdowns? Swollen back panel? Here are the warning signs that your battery is past its prime — and why you shouldn't wait.</p>
+          <div class="blog-meta">
+            <span>April 18, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-d1">
+        <div class="blog-img"><i class="fas fa-gamepad"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Gaming PC</div>
+          <h3>The Ultimate Gaming PC Upgrade Guide for 2025</h3>
+          <p>Whether you're chasing 144Hz or 4K gaming, this guide tells you exactly which components to upgrade first for maximum FPS per dollar.</p>
+          <div class="blog-meta">
+            <span>March 30, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-d2">
+        <div class="blog-img"><i class="fas fa-virus-slash"></i></div>
+        <div class="blog-body">
+          <div class="blog-cat">Security</div>
+          <h3>How to Remove Viruses from Your Computer Safely</h3>
+          <p>Step-by-step guide to detecting and removing malware, spyware, and ransomware — and how to prevent future infections.</p>
+          <div class="blog-meta">
+            <span>March 12, 2025</span>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <div class="tag">Get In Touch</div>
+      <h2 class="section-title reveal">Book a Repair or Ask a Question</h2>
+      <p class="section-sub reveal reveal-d1">Drop off your device, or reach us online — we respond within 30 minutes during business hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item reveal">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <a href="tel:+15555555555" class="ci-val">+1 (555) eldorado-1</a>
+              <div class="ci-sub">Available Mon–Sat 9AM–8PM</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-d1">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <a href="https://wa.me/15555555555" class="ci-val">Chat on WhatsApp</a>
+              <div class="ci-sub">Fastest way to reach us</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-d2">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="ci-label">Email</div>
+              <a href="mailto:support@eldoradorepair.com" class="ci-val">support@eldoradorepair.com</a>
+              <div class="ci-sub">We reply within 2 hours</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-d3">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="ci-label">Business Hours</div>
+              <div class="ci-val">Mon–Sat: 9AM – 8PM</div>
+              <div class="ci-sub">Sunday: 10AM – 5PM</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-d4">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-val">123 Tech Street, Suite 4</div>
+              <div class="ci-sub">Downtown, City, State 00000</div>
+            </div>
+          </div>
+          <div class="reveal" style="padding-left:0">
+            <div class="ci-label" style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">Follow Us</div>
+            <div class="contact-social">
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="map-container reveal" style="margin-top:24px;">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>// Google Map Embed — replace with iframe</span>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option>Mobile Screen Replacement</option>
+              <option>Battery Replacement</option>
+              <option>Charging Port Repair</option>
+              <option>Water Damage Repair</option>
+              <option>Software Installation</option>
+              <option>Virus Removal</option>
+              <option>Laptop Repair</option>
+              <option>Desktop Repair</option>
+              <option>Gaming PC Repair &amp; Upgrade</option>
+              <option>SSD &amp; RAM Upgrade</option>
+              <option>Data Recovery</option>
+              <option>Motherboard Repair</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="device">Device / Model</label>
+            <input type="text" id="device" placeholder="e.g. iPhone 14, Dell XPS 15, Custom PC…" />
+          </div>
+          <div class="form-group">
+            <label for="message">Describe the Issue</label>
+            <textarea id="message" placeholder="Tell us what's happening with your device…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-neon" style="width:100%;justify-content:center;padding:16px;">
+            <i class="fas fa-paper-plane"></i> Submit Repair Request
+          </button>
+          <p style="font-size:12px;color:var(--text-faint);text-align:center;">We'll respond within 30 minutes during business hours.</p>
+        </form>
+        <div id="formSuccess" style="display:none;background:rgba(0,255,136,0.08);border:1px solid rgba(0,255,136,0.3);border-radius:var(--radius);padding:24px;text-align:center;margin-top:16px;">
+          <i class="fas fa-check-circle" style="font-size:36px;color:var(--neon);margin-bottom:12px;display:block;"></i>
+          <h3 style="color:var(--white);margin-bottom:8px;">Request Sent!</h3>
+          <p style="color:var(--text-muted);font-size:14px;">We'll get back to you within 30 minutes. Check your WhatsApp or email!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo nav-logo">
+          <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+          eldorado<span>Repair</span>
+        </div>
+        <p>Your trusted repair partner for mobile phones, laptops, desktops, and gaming PCs. Fast, reliable, and affordable — since 2015.</p>
+        <div class="contact-social">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Screen Replacement</a></li>
+          <li><a href="#services">Battery Replacement</a></li>
+          <li><a href="#services">Laptop Repair</a></li>
+          <li><a href="#services">Gaming PC Repair</a></li>
+          <li><a href="#services">Data Recovery</a></li>
+          <li><a href="#services">Motherboard Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="tel:+15555555555">Call: +1 (555) eldorado-1</a></li>
+          <li><a href="https://wa.me/15555555555">WhatsApp Us</a></li>
+          <li><a href="mailto:support@eldoradorepair.com">Email Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 eldorado Mobile &amp; PC Repair Center. All rights reserved.</p>
+      <p>Built with ❤️ for our community · <a href="#contact">Book a Repair</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-btns">
+  <a href="https://wa.me/15555555555" class="float-btn float-wa" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-tip">Chat on WhatsApp</span>
+  </a>
+  <a href="tel:+15555555555" class="float-btn float-call" aria-label="Call now">
+    <i class="fas fa-phone"></i>
+    <span class="float-tip">Call Now</span>
+  </a>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+  // ===== NAVBAR SCROLL =====
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ===== HAMBURGER =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ===== SCROLL TO TOP =====
+  document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ===== SCROLL REVEAL =====
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ===== ACTIVE NAV LINK =====
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section[id]');
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => sectionObserver.observe(s));
+
+  // ===== CONTACT FORM =====
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+<div class="popup-overlay is-visible" id="promoPopup" role="dialog" aria-modal="true" aria-label="Open WhatsApp chat">
+    <div class="popup-card" id="promoPopupCard" tabindex="0" role="button" aria-label="Open WhatsApp chat">
+      <img src="ELDORADO.png" alt="ELDORADO popup" />
+    </div>
+  </div>
+
+  <script>
+    const promoPopup = document.getElementById('promoPopup');
+    const promoPopupCard = document.getElementById('promoPopupCard');
+
+    const openWhatsApp = () => {
+      window.open('https://wa.link/mythala', '_blank', 'noopener,noreferrer');
+    };
+
+    if (promoPopup && promoPopupCard) {
+      promoPopupCard.addEventListener('click', openWhatsApp);
+      promoPopup.addEventListener('click', (event) => {
+        if (event.target === promoPopup) {
+          openWhatsApp();
+        }
+      });
+      promoPopupCard.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openWhatsApp();
+        }
+      });
+    }
+  </script>
+  </body>
+</html>
